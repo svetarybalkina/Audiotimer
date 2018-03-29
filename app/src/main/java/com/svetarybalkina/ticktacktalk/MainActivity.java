@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import static java.lang.Boolean.parseBoolean;
+
 public class MainActivity extends AppCompatActivity {
 
     SeekBar timerSeekBar;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Button controllerButton;
     Boolean counterIsActive = false;
     CountDownTimer countDownTimer;
+    String secondsInQuotes = "01";
 
     private SoundPool soundPool;
 
@@ -127,439 +130,154 @@ public class MainActivity extends AppCompatActivity {
 
         timerTextView.setText(Integer.toString(minutes) + ":" + secondString);
 
-        if("00".equals(secondString) && 1 == minutes)  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdOne_minute,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("00".equals(secondString) && 2 == minutes)  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTwo_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("00".equals(secondString) && 3 == minutes)  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdThree_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("00".equals(secondString) && 4 == minutes)  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFour_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("00".equals(secondString) && 5 == minutes)  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFive_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("00".equals(secondString) && 6 == minutes)  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdSix_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("00".equals(secondString) && 7 == minutes)  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdSeven_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("00".equals(secondString) && 8 == minutes)  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdEight_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("00".equals(secondString) && 9 == minutes)  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdNine_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("00".equals(secondString) && 10 == minutes)  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTen_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("01".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdOne,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("02".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTwo,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("03".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdThree,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("04".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFour,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("05".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFive,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("06".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdSix,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("07".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdSeven,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("08".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdEight,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("09".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdNine,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("10".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTen,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("11".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdEleven,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("12".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTwelve,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("13".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdThirteen,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("14".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFourteen,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("15".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFifteen,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("16".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdSixteen,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("17".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdSeventeen,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("18".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdEighteen,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("19".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdNineteen,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("20".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTwenty,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("21".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTwenty_one,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("22".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTwenty_two,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("23".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTwenty_three,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("24".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTwenty_four,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("25".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTwenty_five,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-
-        if("26".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTwenty_six,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("27".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTwenty_seven,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("28".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTwenty_eight,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("29".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdTwenty_nine,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("30".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdThirty,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("31".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdThirty_one,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("32".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdThirty_two,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("33".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.getSoundIdThirty_three,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("34".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdThirty_four,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("35".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdThirty_five,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("36".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdThirty_six,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("37".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdThirty_seven,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("38".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdThirty_eight,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("39".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdThirty_nine,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("40".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFourty,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("41".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFourty_one,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("42".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFourty_two,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("43".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFourty_three,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("44".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFourty_four,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("45".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFourty_five,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("46".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFourty_six,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("47".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFourty_seven,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("48".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFourty_eight,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("49".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFourty_nine,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("50".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFifty,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("51".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFifty_one,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("52".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFifty_two,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("53".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFifty_three,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("54".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFifty_four,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("55".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFifty_five,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("56".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFifty_six,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("57".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFifty_seven,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("58".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFifty_eight,leftVolumn, rightVolumn, 1, 0, 1f);
-        }
-        if("59".equals(secondString))  {
-            float leftVolumn = volume;
-            float rightVolumn = volume;
-
-            int streamId = this.soundPool.play(this.soundIdFifty_nine,leftVolumn, rightVolumn, 1, 0, 1f);
+        float leftVolumn = volume;
+        float rightVolumn = volume;
+        Integer streamId;
+
+        switch (secondString) {
+            case "00":
+                switch (minutes) {
+                    case 1:    streamId = this.soundPool.play(this.soundIdOne_minute,leftVolumn, rightVolumn, 1, 0, 1f);
+                                break;
+                    case 2:     streamId = this.soundPool.play(this.soundIdTwo_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
+                                break;
+                    case 3:     streamId = this.soundPool.play(this.soundIdThree_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
+                                break;
+                    case 4:     streamId = this.soundPool.play(this.soundIdFour_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
+                                break;
+                    case 5:     streamId = this.soundPool.play(this.soundIdFive_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
+                                break;
+                    case 6:     streamId = this.soundPool.play(this.soundIdSix_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
+                                break;
+                    case 7:     streamId = this.soundPool.play(this.soundIdSeven_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
+                                break;
+                    case 8:     streamId = this.soundPool.play(this.soundIdEight_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
+                                break;
+                    case 9:     streamId = this.soundPool.play(this.soundIdNine_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
+                                break;
+                    case 10:    streamId = this.soundPool.play(this.soundIdTen_minutes,leftVolumn, rightVolumn, 1, 0, 1f);
+                                break;
+                }
+                        break;
+
+            case "01":  streamId = this.soundPool.play(this.soundIdOne,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "02":  streamId = this.soundPool.play(this.soundIdTwo,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "03":  streamId = this.soundPool.play(this.soundIdThree,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "04":   streamId = this.soundPool.play(this.soundIdFour,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "05":  streamId = this.soundPool.play(this.soundIdFive,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "06":  streamId = this.soundPool.play(this.soundIdSix,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "07":  streamId = this.soundPool.play(this.soundIdSeven,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "08":  streamId = this.soundPool.play(this.soundIdEight,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "09":  streamId = this.soundPool.play(this.soundIdNine,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "10":  streamId = this.soundPool.play(this.soundIdTen,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "11":  streamId = this.soundPool.play(this.soundIdEleven,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "12":  streamId = this.soundPool.play(this.soundIdTwelve,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "13":  streamId = this.soundPool.play(this.soundIdThirteen,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "14":  streamId = this.soundPool.play(this.soundIdFourteen,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "15":  streamId = this.soundPool.play(this.soundIdFifteen,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "16":  streamId = this.soundPool.play(this.soundIdSixteen,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "17":  streamId = this.soundPool.play(this.soundIdSeventeen,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "18":  streamId = this.soundPool.play(this.soundIdEighteen,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "19":  streamId = this.soundPool.play(this.soundIdNineteen,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "20":  streamId = this.soundPool.play(this.soundIdTwenty,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "21":  streamId = this.soundPool.play(this.soundIdTwenty_one,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "22":  streamId = this.soundPool.play(this.soundIdTwenty_two,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "23":  streamId = this.soundPool.play(this.soundIdTwenty_three,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "24":  streamId = this.soundPool.play(this.soundIdTwenty_four,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "25":  streamId = this.soundPool.play(this.soundIdTwenty_five,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "26":  streamId = this.soundPool.play(this.soundIdTwenty_six,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "27":  streamId = this.soundPool.play(this.soundIdTwenty_seven,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "28":  streamId = this.soundPool.play(this.soundIdTwenty_eight,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "29":  streamId = this.soundPool.play(this.soundIdTwenty_nine,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "30":  streamId = this.soundPool.play(this.soundIdThirty,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "31":  streamId = this.soundPool.play(this.soundIdThirty_one,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "32":  streamId = this.soundPool.play(this.soundIdThirty_two,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "33":  streamId = this.soundPool.play(this.getSoundIdThirty_three,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "34":  streamId = this.soundPool.play(this.soundIdThirty_four,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "35":  streamId = this.soundPool.play(this.soundIdThirty_five,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "36":  streamId = this.soundPool.play(this.soundIdThirty_six,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "37":  streamId = this.soundPool.play(this.soundIdThirty_seven,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "38":  streamId = this.soundPool.play(this.soundIdThirty_eight,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "39":  streamId = this.soundPool.play(this.soundIdThirty_nine,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "40":  streamId = this.soundPool.play(this.soundIdFourty,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "41":  streamId = this.soundPool.play(this.soundIdFourty_one,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "42":  streamId = this.soundPool.play(this.soundIdFourty_two,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "43":  streamId = this.soundPool.play(this.soundIdFourty_three,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "44":  streamId = this.soundPool.play(this.soundIdFourty_four,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "45":  streamId = this.soundPool.play(this.soundIdFourty_five,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "46":  streamId = this.soundPool.play(this.soundIdFourty_six,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "47":  streamId = this.soundPool.play(this.soundIdFourty_seven,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "48":  streamId = this.soundPool.play(this.soundIdFourty_eight,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "49":  streamId = this.soundPool.play(this.soundIdFourty_nine,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "50":  streamId = this.soundPool.play(this.soundIdFifty,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "51":  streamId = this.soundPool.play(this.soundIdFifty_one,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "52":  streamId = this.soundPool.play(this.soundIdFifty_two,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "53":  streamId = this.soundPool.play(this.soundIdFifty_three,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "54":  streamId = this.soundPool.play(this.soundIdFifty_four,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "55":  streamId = this.soundPool.play(this.soundIdFifty_five,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "56":  streamId = this.soundPool.play(this.soundIdFifty_six,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "57":  streamId = this.soundPool.play(this.soundIdFifty_seven,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "58":  streamId = this.soundPool.play(this.soundIdFifty_eight,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
+            case "59":  streamId = this.soundPool.play(this.soundIdFifty_nine,leftVolumn, rightVolumn, 1, 0, 1f);
+                        break;
         }
 
     }
